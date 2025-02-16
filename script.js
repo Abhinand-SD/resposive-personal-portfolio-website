@@ -49,3 +49,86 @@ window.onscroll = () =>{
 
     footer.classList.toggle('show-animate', this.innerHeight + this.scrollY >= document.scrollingElement.scrollHeight);
 }
+
+
+//form validation
+document.addEventListener("DOMContentLoaded", function () {
+    const form = document.getElementById("contactForm");
+    const popup = document.getElementById("errorPopup");
+    const popupMessage = document.getElementById("popupMessage");
+
+    form.addEventListener("submit", function (e) {
+        e.preventDefault(); // Prevent form submission
+
+        let isValid = true;
+        let firstError = null; // Track the first error message
+
+        // Get input values
+        let fullName = document.getElementById("fullName");
+        let email = document.getElementById("email");
+        let mobile = document.getElementById("mobile");
+        let subject = document.getElementById("subject");
+        let message = document.getElementById("message");
+
+        // Validation rules
+        if (fullName.value.trim().length < 3) {
+            isValid = false;
+            firstError = firstError || "Full Name must be at least 3 characters.";
+        }
+
+        let emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!emailRegex.test(email.value.trim())) {
+            isValid = false;
+            firstError = firstError || "Enter a valid email address.";
+        }
+
+        let mobileRegex = /^[0-9]{10,15}$/;
+        if (!mobileRegex.test(mobile.value.trim())) {
+            isValid = false;
+            firstError = firstError || "Enter a valid mobile number.";
+        }
+
+        if (!isNaN(subject.value.trim())) {
+            isValid = false;
+            firstError = firstError || "Email Subject cannot be only numbers.";
+        }
+
+
+        if (subject.value.trim().length < 3) {
+            isValid = false;
+            firstError = firstError || "Email Subject must be at least 3 characters.";
+        }
+
+        if (message.value.trim().length < 10) {
+            isValid = false;
+            firstError = firstError || "Message must be at least 10 characters.";
+        }
+
+        // Show popup if there is an error
+        if (firstError) {
+            popupMessage.textContent = firstError;
+            popup.style.display = "block"; 
+            setTimeout(() => {
+                popup.style.display = "none"; 
+            }, 3000);
+        }
+
+        // Submit form if valid
+        if (isValid) {
+            popupMessage.textContent = "Form submitted successfully!";
+            popup.style.backgroundColor = "black"; 
+            popup.style.color = "green"; 
+            popup.style.display = "block";
+        
+            setTimeout(() => {
+                popup.style.display = "none"; 
+                form.submit();
+                setTimeout(() => {
+                    window.location.reload();
+                },200)
+            }, 3000);
+        }
+        
+    });
+});
+

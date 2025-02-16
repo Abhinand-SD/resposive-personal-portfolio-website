@@ -756,11 +756,11 @@ span {
   animation-delay: calc(.3s * var(--i));
 }
 
-.animate.scroll{
+/*.animate.scroll{
   transition: 1s ease;
   transition-delay: calc(.3s / var(--i));
   animation: none;
-}
+} */
 
 section:nth-child(odd) .animate.scroll,
 .footer .animate.scroll{
@@ -993,4 +993,37 @@ section:nth-child(odd) .animate.scroll,
   100% {
     pointer-events: auto;
   }
+}
+
+/* Fix autofill background color */
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus {
+    background-color: black !important; /* Change to your desired background */
+    color: white !important; /* Change text color */
+    -webkit-text-fill-color: white !important;
+    transition: background-color 5000s ease-in-out 0s;
+}
+
+/* Custom Popup Styling */
+#errorPopup {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: black;
+  color: rgb(255, 255, 255);
+  padding: 12px 20px;
+  border-radius: 8px;
+  font-size: 16px;
+  text-align: center;
+  font-weight: lighter;
+  
+  min-width: 280px;
+  max-width: 400px;
+  z-index: 1000;
 }

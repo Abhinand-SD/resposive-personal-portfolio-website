@@ -59,23 +59,23 @@
     </section>
 
     <section class="about" id="about">
-        <h2 class="heading">About <span>Me</span><span class="animate scroll" style="--i:1;"></span></h2>
+        <h2 class="heading">About <span>Me</span></h2>
 
         <div class="about-img">
             <img src="image/profile.jpg" alt="profile-pic">
             <span class="circle-spin"></span>
-            <span class="animate scroll" style="--i:2;"></span>
+            
             
         </div>
 
         <div class="about-content">
-            <h3>Frontend Developer <span class="animate scroll" style="--i:3;"></span></h3>
+            <h3>Frontend Developer </h3>
             <p>An enthusiastic product designer currently shaping the future of software development by designing smooth
                 user-interfaces that promote user interaction with information and data. While traveling around the
-                world.<span class="animate scroll" style="--i:4;"></span></p>
+                world.</p>
             <div class="btn-box btns">
                 <a href="#" class="btn">Read More</a>
-                <span class="animate scroll" style="--i:5;"></span>
+                
             </div>
 
 
@@ -86,11 +86,11 @@
 
     <section class="education" id="education">
 
-        <h2 class="heading">My <span>Journey</span><span class="animate scroll" style="--i:1;"></span></h2>
+        <h2 class="heading">My <span>Journey</span></h2>
 
         <div class="education-row">
             <div class="education-column">
-                <h3 class="title">Education <span class="animate scroll" style="--i:2;"></span></h3>
+                <h3 class="title">Education </h3>
 
                 <div class="education-box">
                     <div class="education-content">
@@ -109,14 +109,14 @@
                         </div>
                     </div>
 
-                    <span class="animate scroll" style="--i:3;"></span>
+                    
                 </div>
 
             </div>
 
 
             <div class="education-column">
-                <h3 class="title">Intership <span class="animate scroll" style="--i:4;"></span></h3>
+                <h3 class="title">Intership </h3>
 
                 <div class="education-box">
                     <div class="education-content">
@@ -138,14 +138,14 @@
                         </div>
                     </div>
 
-                    <span class="animate scroll" style="--i:5;"></span>
+                    
                 </div>
 
             </div>
 
 
             <!-- <div class="education-column">
-                <h3 class="title">Project <span class="animate scroll" style="--i:6;"></span></h3>
+                <h3 class="title">Project </h3>
 
                 <div class="education-box">
                     <div class="education-content">
@@ -172,7 +172,7 @@
                         </div>
                     </div>
 
-                    <span class="animate scroll" style="--i:7;"></span>
+                    
                 </div>
 
             </div> -->
@@ -182,14 +182,14 @@
 
     <section class="skills" id="skills">
 
-        <h2 class="heading">My <span>Skills</span> <span class="animate scroll" style="--i:1;"></span></h2>
+        <h2 class="heading">My <span>Skills</span> </h2>
 
         <div class="skills-row">
 
 
 
             <div class="skills-column">
-                <h3 class="title">Coding Skills <span class="animate scroll" style="--i:2;"></span></h3>
+                <h3 class="title">Coding Skills </h3>
 
                 <div class="skills-box">
                     <div class="skills-content">
@@ -221,12 +221,12 @@
                         </div>
 
                     </div>
-                    <span class="animate scroll" style="--i:3;"></span>
+                    
                 </div>
             </div>
 
             <div class="skills-column">
-                <h3 class="title">Professional Skills <span class="animate scroll" style="--i:4;"></span></h3>
+                <h3 class="title">Professional Skills </h3>
 
                 <div class="skills-box">
                     <div class="skills-content">
@@ -253,7 +253,7 @@
                         </div>
                     </div>
 
-                    <span class="animate scroll" style="--i:5;"></span>
+                    
 
                 </div>
 
@@ -263,46 +263,49 @@
     </section>
 
     <section class="contact" id="contact">
-        <h2 class="heading">Contact <span>Me!</span> <span class="animate scroll" style="--i:1;"></span></h2>
+        <h2 class="heading">Contact <span>Me!</span> </h2>
 
-        <form action="#" method="post">
+        <form id="contactForm">
             <div class="input-box">
                 <div class="input-field">
-                    <input type="text" placeholder="Full Name" required>
-                    <span class="focus"></span>
+                    <input type="text" id="fullName" placeholder="Full Name">
                 </div>
                 <div class="input-field">
-                    <input type="text" placeholder="Email Address" required>
-                    <span class="focus"></span>
+                    <input type="text" id="email" placeholder="Email Address">
                 </div>
-                <span class="animate scroll" style="--i:2;"></span>
             </div>
-
+        
             <div class="input-box">
                 <div class="input-field">
-                    <input type="text" placeholder="Mobile Number" required>
-                    <span class="focus"></span>
+                    <input type="text" id="mobile" placeholder="Mobile Number">
                 </div>
                 <div class="input-field">
-                    <input type="text" placeholder="Email Subject" required>
-                    <span class="focus"></span>
+                    <input type="text" id="subject" placeholder="Email Subject">
                 </div>
-                <span class="animate scroll" style="--i:3;"></span>
             </div>
-
-
-
+        
             <div class="textarea-field">
-                <textarea name="" id="" cols="30" rows="10" placeholder="Write your message here..."
-                    required></textarea>
-                <span class="focus"></span>
-                <span class="animate scroll" style="--i:4;"></span>
+                <textarea id="message" cols="30" rows="10" placeholder="Write your message here..."></textarea>
             </div>
-
+        
             <div class="btn-box btns">
-                <button type="submit" class="btn">Submit <span class="animate scroll" style="--i:5;"></span></button>
+                <button type="submit" class="btn">Submit</button>
             </div>
         </form>
+        
+        <!-- Custom Error Popup -->
+        <div id="errorPopup">
+            <p id="popupMessage"></p>
+        </div>
+        
+        
+        <!-- Custom Error Popup -->
+        <div id="errorPopup">
+            <p id="popupMessage"></p>
+        </div>
+        
+        
+        
 
     </section>
 
@@ -310,12 +313,12 @@
         <div class="footer-text">
             <p >Copyright &copy; <span id="year"></span> by Abhinand | All Rights Reserved.</p>
 
-            <span class="animate scroll" style="--i:1;"></span>
+            
         </div>
         <div class="footer-iconTop">
             <a href="#home"><i class="bx bx-up-arrow-alt"></i></a>
 
-            <span class="animate scroll" style="--i:2;"></span>
+            
         </div>
     </footer>
 
